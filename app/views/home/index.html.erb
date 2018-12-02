@@ -1,9 +1,23 @@
-<h1>Hello, World</h1>
-<p>Stories coming soon...<p>
-
-<div>
-    <h2>Current time in Tokyo</h2>
-    <p><%= ActiveSupport::TimeZone.new('Asia/Tokyo').now %></p><!-- note that the % + = format demarcates ruby code %> ---!>
-    <h2>Current time in Los Angeles</h2>
-    <p><%= ActiveSupport::TimeZone.new('America/Los_Angeles').now %><p>
+<div id="home-landing-page">
+    <div class="home-landing">
+        <div>
+            <h1>Eco Stories</h1>
+            <p>Storytelling coming soon...</p>
+        </div>
+    </div>
+        
+    <div class="home-landing" id="home-splash-div">
+        <div>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Earth%27s_City_Lights_by_DMSP%2C_1994-1995_%28large%29.jpg/800px-Earth%27s_City_Lights_by_DMSP%2C_1994-1995_%28large%29.jpg"></img>
+        </div>
+    </div>
+        
+    <div class="home-landing" id="home-widget">
+        <div>
+            <h2>Current time in Tokyo</h2>
+            <p><%= ActiveSupport::TimeZone.new('Asia/Tokyo').now %></p><!-- note that the % + = format demarcates ruby code %> ---!>
+            <h2>Current time in Los Angeles</h2>
+            <p><%= ActiveSupport::TimeZone.new('America/Los_Angeles').now %><p>
+        </div>
+    </div>
 </div>

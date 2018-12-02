@@ -11,5 +11,30 @@
 // about supported directives.
 //
 //= require rails-ujs
+//= require jquery3
+//= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+
+$( document ).ready(function() {
+    console.log("what's up, Hosh!");
+    var posn = 0;
+    
+    var body = document.body,
+            html = document.documentElement;
+    
+    var docHeight = Math.max( body.scrollHeight, body.offsetHeight, 
+                               html.clientHeight, html.scrollHeight, html.offsetHeight );
+    
+    window.addEventListener('scroll', function(e) {
+        posn = window.scrollY;
+        tot = docHeight; // need to check this
+        doSomething(posn, tot);
+    });
+    
+    function doSomething(posn, tot) {
+        var percentHeight = (posn/tot*100);
+        var newColor = "linear-gradient(to top, white," + percentHeight + "%, lightBlue)"
+        $(document).find(body).css("background",newColor);
+    }
+});
